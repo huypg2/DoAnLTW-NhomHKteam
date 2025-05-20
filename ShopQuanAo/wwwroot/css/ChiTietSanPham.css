@@ -1,0 +1,28 @@
+/* wwwroot/css/product-detail.css */
+.product-detail {
+    display: flex;
+    gap: 32px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+.product-image img {
+    width: 350px;
+    border-radius: 8px;
+}
+.product-info {
+    flex: 1;
+}
+.product-price {
+    color: #e53935;
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+.add-to-cart {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}

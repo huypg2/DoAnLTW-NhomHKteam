@@ -1,0 +1,39 @@
+﻿<!-- Top Header -->
+<div class="top-header">
+    <header class="container">
+        <div class="logo-area">
+            <div class="logo-img">HK</div>
+            <div class="store-name">
+                <h1>Staylewarestore</h1>
+            </div>
+        </div>
+        <div class="user-actions">
+            <a href="#" class="user-action-link">Trung tâm CSKH</a>
+            <a href="#" class="user-action-link">Đăng nhập</a>
+        </div>
+    </header>
+</div>
+
+<!-- Navigation -->
+<div class="main-nav">
+    <nav class="container">
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="ProductsPage">Danh sách sản phẩm</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+        <div class="search-cart">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+                <i class="fas fa-search icon"></i>
+            </div>
+            <div class="user-icon">
+                <i class="fas fa-user-circle icon"></i>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                <a asp-area="" asp-controller="Home" asp-action="Cart"><i class="fas fa-shopping-cart icon"></i></a>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,197 @@
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<div class="modern-cart-container">
+    <div class="cart-header">
+        <h1>Giỏ hàng của bạn</h1>
+        
+        <div class="cart-progress">
+            <div class="progress-step active">
+                <div class="step-number">1</div>
+                <div class="step-label">Giỏ hàng</div>
+            </div>
+            
+            <div class="progress-step">
+                <div class="step-number">2</div>
+                <div class="step-label">Thanh toán</div>
+            </div>
+            
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Hoàn tất</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-content">
+        <!-- Empty Cart View -->
+        <div class="empty-cart" id="emptyCartView">
+            <div class="empty-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </div>
+            <h2>Giỏ hàng của bạn đang trống</h2>
+            <p>Hãy khám phá cửa hàng và thêm những sản phẩm ưa thích vào giỏ hàng</p>
+            <a href="/products" class="continue-shopping-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Tiếp tục mua sắm
+            </a>
+        </div>
+        
+        <!-- Filled Cart View -->
+        <div class="filled-cart" id="filledCartView">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/100x100" alt="Áo thun nam">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Áo thun nam cổ tròn</h3>
+                        <p class="item-variant">Màu: Trắng | Size: L</p>
+                        <div class="item-actions">
+                            <button class="remove-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                </svg>
+                                Xóa
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-price">299.000₫</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="text" class="quantity-input" value="1" readonly>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <div class="item-total">299.000₫</div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/100x100" alt="Quần jeans">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Quần jeans nam slim fit</h3>
+                        <p class="item-variant">Màu: Xanh đậm | Size: 32</p>
+                        <div class="item-actions">
+                            <button class="remove-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                </svg>
+                                Xóa
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item-price">499.000₫</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="text" class="quantity-input" value="1" readonly>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <div class="item-total">499.000₫</div>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="promo-section">
+                    <h3>Mã giảm giá</h3>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Nhập mã giảm giá">
+                        <button class="apply-btn">Áp dụng</button>
+                    </div>
+                    <div class="promo-suggestions">
+                        <span class="promo-tag">SALE10</span>
+                        <span class="promo-tag">FREESHIP</span>
+                        <span class="promo-tag">NEWCUS</span>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h3>Tổng đơn hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span>798.000₫</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Giảm giá:</span>
+                        <span>-0₫</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span>30.000₫</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span>828.000₫</span>
+                    </div>
+                    
+                    <button class="checkout-btn">Tiến hành thanh toán</button>
+                    
+                    <div class="payment-methods">
+                        <img src="https://via.placeholder.com/40x25" alt="Payment method">
+                        <img src="https://via.placeholder.com/40x25" alt="Payment method">
+                        <img src="https://via.placeholder.com/40x25" alt="Payment method">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Demo: Toggle between empty and filled cart
+        function toggleCartView() {
+            const emptyCart = document.getElementById('emptyCartView');
+            const filledCart = document.getElementById('filledCartView');
+            
+            if (emptyCart.style.display === 'none') {
+                emptyCart.style.display = 'flex';
+                filledCart.style.display = 'none';
+            } else {
+                emptyCart.style.display = 'none';
+                filledCart.style.display = 'block';
+            }
+        }
+        
+        // Quantity controls
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('.quantity-input');
+                let value = parseInt(input.value);
+                
+                if (this.classList.contains('minus') {
+                    if (value > 1) {
+                        input.value = value - 1;
+                    }
+                } else if (this.classList.contains('plus')) {
+                    input.value = value + 1;
+                }
+                
+                // Update total price (in a real app, you would recalculate the total)
+            });
+        });
+        
+        // Remove item
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.cart-item').remove();
+                
+                // In a real app, you would update the cart total
+                // If no items left, show empty cart
+                if (document.querySelectorAll('.cart-item').length === 0) {
+                    toggleCartView();
+                }
+            });
+        });
+    </script>
+}

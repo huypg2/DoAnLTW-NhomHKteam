@@ -1,0 +1,17 @@
+@using ShopQuanAo.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!-- filepath: e:\soursecode\ShopQuanAo\Views\Home\ProductDetail.cshtml -->
+<div class="product-detail">
+    <div class="product-image">
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+    </div>
+    <div class="product-info">
+        <h1>@Model.Name</h1>
+        <div class="product-price">@Model.Price.ToString("N0") đ</div>
+        <div class="product-description">@Model.Description</div>
+        <button class="add-to-cart">
+            <i class="fas fa-shopping-cart"></i> Thêm vào giỏ
+        </button>
+    </div>
+</div>

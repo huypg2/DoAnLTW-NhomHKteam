@@ -1,0 +1,9 @@
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Gọi tất cả các partial views -->
+@await Html.PartialAsync("HeroBanner")
+@await Html.PartialAsync("Products")
+
